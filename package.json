@@ -1,0 +1,8 @@
+{
+    "name": "borg",
+    "version": "0.0.1",
+    "description": "Borg!",
+    "main": "index.js",
+    "author": "Joseph Arhar",
+    "dependencies": {}
+}
