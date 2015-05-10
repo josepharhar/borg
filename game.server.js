@@ -1,7 +1,7 @@
 var game = {};
 module.exports = game;
 
-game.lastUpdate = getTime();
+game.lastUpdate = Date.now();
 
 game.updateIntervalMilis = 20;
 
@@ -17,15 +17,15 @@ game.updateClients = function() {
 
 // Continuously running game function
 game.run = function() {
-	console.log("game running");
+	console.log("game running. Date.now(): " + process.hrtime());
 
 
 	// send data to clients every 20ms
-	if (getTime() - game.lastUpdate < game.updateTimeMilis) {
+	if (Date.now() - game.lastUpdate < game.updateTimeMilis) {
 		game.updateClients();
-		lastUpdate = getTime();
+		lastUpdate = Date.now();
 	}
 
 	// loop the game indefinitely
-	setImmediate(game.run);
+	//setInterval(game.run, 1000);
 };

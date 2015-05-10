@@ -47,4 +47,5 @@ var server = http.listen(3000, function() {
 });
 
 // start the game
-game.run();
+//game.run();
+setInterval(game.run, 1000);
